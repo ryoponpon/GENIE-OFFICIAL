@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "ja">
+  <head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【公式】GENIE │ ジーニー</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <meta name="description" content="GENIEの施術は魔法級！新しいあなたに生まれ変わります。">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="top-bg">
+      <header>
+        <div class="header-nav">
+          <a class="top-logo" href="/">GENIE</a>
+          <ul>
+            <li><a href="/">施術紹介</a></li>
+            <% if (locals.isLoggedIn) { %>
+              <li><a id="logoutButton" href="/logout">ログアウト</a></li>
+            <% } else { %>
+              <li><a href="/signup">新規登録</a></li>
+              <li><a href="/login">ログイン</a></li>
+            <% } %>
+          </ul>
+        </div>
+      </header>
+      <main>
+        
+        
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  
+</html>

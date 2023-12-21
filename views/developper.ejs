@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang = "ja">
+  <head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【公式】GENIE │ ジーニー</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <meta name="description" content="GENIEの施術は魔法級！新しいあなたに生まれ変わります。">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="dev-bg">
+      <header>
+        <div class="header-nav">
+          <a class="top-logo" href="/">GENIE</a>
+          <ul>
+           <li><a href="/">トップに戻る</a></li>
+          </ul>
+        </div>
+      </header>
+      <main>
+        <div class="dev-sign">
+          <h1>GENIE FOR DEVELOPPER</h1>
+          <div class="error">
+            <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+              <ul>
+                <% errors.forEach((error) => { %>
+                  <li><%= error %></li>
+                <% }); %>
+              </ul>
+            <% } %>
+          </div>
+          <form class="dev-form" action="/developper" method="post">
+            <p>タイトル</p>
+            <input class="dev-title" type="text" size="40" name="title">
+            <p>内容</p>
+            <textarea class="dev-content" rows="30" cols="60" name="content"></textarea>
+            <p>カテゴリ</p>
+            <ul>
+              <li><input type="radio" id="option1" name="category" value="all">
+              <label for="option1">全員</label><br></li>
+              <li><input type="radio" id="option2" name="category" value="limited">
+              <label for="option2">限定</label><br></li>
+            </ul>
+            <input id="confirmButton" class="dev-submit" type="submit">
+          </form>
+          <div id="confirmationModal" style="display: none;">
+            <p>この内容で送信しますか？</p>
+            <button id="yesButton">はい</button>
+            <button id="noButton">いいえ</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="confirmationModal1" style="display: none;">
+      <!-- モーダルの中身 -->
+      <p>ログアウトしてもよろしいですか？</p>
+      <div class="modalButton">
+        <button id="confirmLogout1">はい</button>
+        <button id="cancelLogout1">いいえ</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  
+</html>

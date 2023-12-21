@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "ja">
+  <head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【公式】GENIE │ ジーニー</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <meta name="description" content="GENIEの施術は魔法級！新しいあなたに生まれ変わります。">
+  </head>
+  <header>
+    <div class="header-nav">
+      <a class="top-logo" href="/">GENIE</a>
+      <p>ようこそ <%= locals.username %>様</p>
+      <ul>
+        <li><a href="/">施術紹介</a></li>
+        <% if (locals.isLoggedIn) { %>
+          <li><a id="logoutButton" href="/logout">ログアウト</a></li>
+        <% } else { %>
+          <li><a href="/signup">新規登録</a></li>
+          <li><a href="/login">ログイン</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </header>
+  <body>
+    <div class="bg-image">
+      <div class="sign">
+        <div class="container">
+          <div class="panel">
+            <h2>ログイン</h2>
+            <% if (errors && errors.length > 0) { %>
+              <div class="error-messages">
+                <ul>
+                  <% errors.forEach(function(error) { %>
+                    <li><%= error %></li>
+                  <% }); %>
+                </ul>
+              </div>
+            <% } %>
+            <form action="/login" method="post">
+              <p>メールアドレス</p>
+              <input type="email" name="email">
+              <p>パスワード</p>
+              <input type="password" name="password">
+              <input type="submit" value="ログイン">
+              <a class="to-top" href="/">トップにもどる</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

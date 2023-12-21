@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang = "ja">
+  <head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【公式】GENIE │ ジーニー</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Cinzel+Decorative:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <meta name="description" content="GENIEの施術は魔法級！新しいあなたに生まれ変わります。">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="blog-bg">
+      <header>
+        <div class="header-nav">
+          <a class="top-logo" href="/">GENIE</a>
+          <ul>
+            <li><a href="/int">施術紹介</a></li>
+            <% if (locals.isLoggedIn) { %>
+              <li><a id="logoutButton" href="/logout">ログアウト</a></li>
+            <% } else { %>
+              <li><a href="/signup">新規登録</a></li>
+              <li><a href="/login">ログイン</a></li>
+            <% } %>
+          </ul>
+        </div>
+      </header>
+      <section class="blog-body">
+        <h2 class="blog-subject">Welcome to BLOG</h2>
+        <% articles.forEach((article)=>{ %>
+        <article class="post">
+          <h2 class="post-title"><%= article.title %><% if(article.category === "limited"){ %>
+            <span class="member">会員限定</span>
+          <% } %></h2>
+          <p class="post-date"><%= article.formattedDate %></p>
+          <p class="post-content"><%= article.content.slice(0, 40) %><%= article.content.length > 40 ? '...' : '' %></p>
+          <div class="for-continueToRead">
+            <a href="/article/<%= article.id %>" class="continueToRead">Read more</a>
+            <!--デベロッパーアカウントの場合表示される-->
+            <% if (locals.username === 'ryopon_pon_pon') { %>
+              <div class="edit-container">
+                <button onclick="window.location.href='/article/edit/<%= article.id %>'" class="editButton">編集</button>
+
+                <form action="/article/delete/<%= article.id %>?_method=DELETE" method="POST">
+                  <button type="submit" class="deleteButton" data-article-id="<%= article.id %>">削除</button>
+                </form>
+              </div>
+            <% } %>
+                  
+          </div>
+        </article>
+        <% }); %>
+        <div class="pagination">
+          <% if (pages.length) { %>
+            <% pages.forEach((page) => { %>
+              <a href="<%= page.url %>" class="<%= page.number === currentPage ? 'active' : '' %>"><%= page.number %></a>
+            <% }); %>
+          <% } %>
+        </div>   
+      </section>
+    </div>
+    
+    <div id="confirmationModal2" class="modal" style="display: none;">
+      <p>記事を削除しますか？</p>
+      <div class="modalButton">
+          <button id="confirmDeleteButton">はい</button>
+          <button id="cancelDeleteButton">いいえ</button>
+      </div>
+    </div>
+
+    <div id="confirmationModal1" style="display: none;">
+      <!-- モーダルの中身 -->
+      <p>ログアウトしてもよろしいですか？</p>
+      <div class="modalButton">
+        <button id="confirmLogout1">はい</button>
+        <button id="cancelLogout1">いいえ</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  
+</html>

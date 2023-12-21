@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "ja">
+  <head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【公式】GENIE │ ジーニー</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <meta name="description" content="GENIEの施術は魔法級！新しいあなたに生まれ変わります。">
+  </head>
+  <body>
+    <div class="bg-image">
+      <div class="sign">
+        <div class="container">
+          <h1><a href="/">GENIE</a></h1>
+          <div class="panel">
+            <h2>新規登録</h2>
+            <% if (errors.length > 0) { %>
+              <ul class="errors">
+                <% errors.forEach(error => { %>
+                  <li><%= error %></li>
+                <% }); %>
+              </ul>
+            <% } %>
+            <form action="/signup" method="post">
+              <p>ユーザー名</p>
+              <input type="text" name="username">
+              <p>メールアドレス</p>
+              <input type="email" name="email">
+              <p>パスワード</p>
+              <input type="password" name="password">
+              <input type="submit" value="登録する">
+              <a class="to-top" href="/">トップにもどる</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

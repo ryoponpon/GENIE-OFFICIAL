@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang = "ja">
+  <head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【公式】GENIE │ ジーニー</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Cinzel+Decorative:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <meta name="description" content="GENIEの施術は魔法級！新しいあなたに生まれ変わります。">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="article-bg">
+      <header>
+        <div class="header-nav">
+          <a class="top-logo" href="/">GENIE</a>
+          <ul>
+            <li><a href="/int">施術紹介</a></li>
+            <% if (locals.isLoggedIn) { %>
+              <li><a id="logoutButton" href="/logout">ログアウト</a></li>
+            <% } else { %>
+              <li><a href="/signup">新規登録</a></li>
+              <li><a href="/login">ログイン</a></li>
+            <% } %>
+          </ul>
+        </div>
+      </header>
+      <div class="this">
+        <div class="article-form">
+          <% if(article && article.category === 'limited'){ %>
+            <div class="for-member">
+              <p class="member">会員限定</p>
+            </div>
+            <h1><%= article.title %></h1>
+            <p class="this-date"><%= article.formattedDate %></p>
+            <% if(locals.isLoggedIn){ %>
+              <p class="article"><%= article.content %></p>
+              <div class="to-index-container">
+                <a class="to-index" href="/blog">一覧へ</a>
+              </div>
+            <% } else {%>
+              <div class="article-continue">
+                <p>記事はログインすると読むことが出来ます</p>
+                <p class="article-login">今すぐ無料でログインしよう！</p>
+                <img src="/images/conceal_1.jpg" alt="">
+                <div class="article-sign">
+                  <a href="/login">ログイン</a>
+                  <a href="/signup">新規登録</a>
+                </div>
+                <div class="to-index-container">
+                  <a class="to-index" href="/blog">一覧へ</a>
+                </div>
+              </div>
+            <% } %>
+          <% } %>
+          <% if(article && article.category === 'all') {%>
+            <h1><%= article.title %></h1>
+            <p class="this-date"><%= article.formattedDate %></p>
+            <p class="article"><%= article.content %></p>
+            <div class="to-index-container">
+              <a class="to-index" href="/blog">一覧へ</a>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <div id="confirmationModal" style="display: none;">
+      <!-- モーダルの中身 -->
+      <p>ログアウトしてもよろしいですか？</p>
+      <button id="confirmLogout">はい</button>
+      <button id="cancelLogout">キャンセル</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  
+</html>
