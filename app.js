@@ -1,9 +1,12 @@
+
 const express = require('express');
 const mysql = require('mysql');
 const session = require('express-session');
 const paginate = require('express-paginate');
 const bcrypt = require('bcrypt');
 const app =express();
+
+
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -427,6 +430,6 @@ app.post('/remove-account', (req, res) => {
 });
 
 // ポート指定
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('Server is running on port 3000');
 });
