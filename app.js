@@ -7,7 +7,7 @@ const fs = require('fs');
 const mysql = require('mysql');
 const session = require('express-session');
 const paginate = require('express-paginate');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const PORT = 3000;
 
 
