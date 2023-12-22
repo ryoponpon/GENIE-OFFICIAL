@@ -1,11 +1,14 @@
-const http = require('http');
-const fs = requirea('fs');
 const express = require('express');
+const app =express();
+const http = require('http');
+const server = new http.Server(app);
+const io = require('socket.io')(server);
+const fs = require('fs');
 const mysql = require('mysql');
 const session = require('express-session');
 const paginate = require('express-paginate');
 const bcrypt = require('bcrypt');
-const app =express();
+const PORT = 3000;
 
 
 
@@ -431,6 +434,6 @@ app.post('/remove-account', (req, res) => {
 });
 
 // ポート指定
-app.listen(process.env.PORT || 3000, () => {
-  console.log('Server is running on port 3000');
+server.listen(PORT, () => {
+  console.log('Server is running');
 });
