@@ -440,6 +440,6 @@ app.post('/remove-account', (req, res) => {
 });
 
 // ポート指定
-server.listen(PORT, () => {
+server.listen(process.env.PORT || 3000, () => {
   console.log('Server is running');
 });
