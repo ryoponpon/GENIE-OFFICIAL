@@ -52,6 +52,12 @@ app.use((req, res, next) => {
   next();
 });
 
+
+//socket 
+io.on('connection', (secket) => {
+  console.log('socket接続成功');
+});
+
 //トップ
 
 app.get('/', (req, res) => {
