@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "build": "next build",
-    "heroku-postbuild": "npm run-script build" 
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryoponpon/GENIE-OFFICIAL.git"
   },
   "keywords": [],
   "author": "",
