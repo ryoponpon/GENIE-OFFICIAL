@@ -8,7 +8,7 @@ const mysql = require('mysql');
 const session = require('express-session');
 const paginate = require('express-paginate');
 const bcrypt = require('bcryptjs');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 
@@ -29,6 +29,8 @@ const connection = mysql.createConnection({
   database: 'Genie',
   charset: 'utf8mb4'
 });
+
+
 
 app.use(
   session({

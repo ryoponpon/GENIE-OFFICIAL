@@ -1,109 +1,105 @@
 PS C:\Users\ryopo\OneDrive\ドキュメント\プログラミング\Genie_for_developper> heroku logs --tail --app genie-hp
-2023-12-22T06:34:50.040501+00:00 app[web.1]: Error: /app/node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node: invalid ELF header
-2023-12-22T06:34:50.040502+00:00 app[web.1]: at Module._extensions..node (node:internal/modules/cjs/loader:1473:18)
-2023-12-22T06:34:50.040503+00:00 app[web.1]: at Module.load (node:internal/modules/cjs/loader:1207:32)
-2023-12-22T06:34:50.040503+00:00 app[web.1]: at Module._load (node:internal/modules/cjs/loader:1023:12)
-2023-12-22T06:34:50.040503+00:00 app[web.1]: at Module.require (node:internal/modules/cjs/loader:1235:19)
-2023-12-22T06:34:50.040504+00:00 app[web.1]: at require (node:internal/modules/helpers:176:18)
-2023-12-22T06:34:50.040504+00:00 app[web.1]: at Object.<anonymous> (/app/node_modules/bcrypt/bcrypt.js:6:16)
-2023-12-22T06:34:50.040504+00:00 app[web.1]: at Module._compile (node:internal/modules/cjs/loader:1376:14)
-2023-12-22T06:34:50.040504+00:00 app[web.1]: at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
-2023-12-22T06:34:50.040505+00:00 app[web.1]: at Module.load (node:internal/modules/cjs/loader:1207:32)
-2023-12-22T06:34:50.040505+00:00 app[web.1]: at Module._load (node:internal/modules/cjs/loader:1023:12) {
-2023-12-22T06:34:50.040509+00:00 app[web.1]: code: 'ERR_DLOPEN_FAILED'
-2023-12-22T06:34:50.040509+00:00 app[web.1]: }
-2023-12-22T06:34:50.040510+00:00 app[web.1]:
-2023-12-22T06:34:50.040510+00:00 app[web.1]: Node.js v20.10.0
-2023-12-22T06:34:50.176620+00:00 heroku[web.1]: Process exited with status 1
-2023-12-22T06:34:50.198187+00:00 heroku[web.1]: State changed from starting to crashed
-2023-12-22T06:57:02.824172+00:00 heroku[web.1]: State changed from crashed to starting
-2023-12-22T06:57:06.197857+00:00 heroku[web.1]: Starting process with command `node app.js`
-2023-12-22T06:57:07.511013+00:00 app[web.1]: node:internal/modules/cjs/loader:1473
-2023-12-22T06:57:07.511022+00:00 app[web.1]: return process.dlopen(module, path.toNamespacedPath(filename));
-2023-12-22T06:57:07.511023+00:00 app[web.1]: ^
-2023-12-22T06:57:07.511023+00:00 app[web.1]:
-2023-12-22T06:57:07.511024+00:00 app[web.1]: Error: /app/node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node: invalid ELF header      
-2023-12-22T06:57:07.511024+00:00 app[web.1]: at Module._extensions..node (node:internal/modules/cjs/loader:1473:18)
-2023-12-22T06:57:07.511024+00:00 app[web.1]: at Module.load (node:internal/modules/cjs/loader:1207:32)
-2023-12-22T06:57:07.511024+00:00 app[web.1]: at Module._load (node:internal/modules/cjs/loader:1023:12)
-2023-12-22T06:57:07.511033+00:00 app[web.1]: at Module.require (node:internal/modules/cjs/loader:1235:19)
-2023-12-22T06:57:07.511033+00:00 app[web.1]: at require (node:internal/modules/helpers:176:18)
-2023-12-22T06:57:07.511033+00:00 app[web.1]: at Object.<anonymous> (/app/node_modules/bcrypt/bcrypt.js:6:16)
-2023-12-22T06:57:07.511033+00:00 app[web.1]: at Module._compile (node:internal/modules/cjs/loader:1376:14)
-2023-12-22T06:57:07.511033+00:00 app[web.1]: at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
-2023-12-22T06:57:07.511034+00:00 app[web.1]: at Module.load (node:internal/modules/cjs/loader:1207:32)
-2023-12-22T06:57:07.511034+00:00 app[web.1]: at Module._load (node:internal/modules/cjs/loader:1023:12) {
-2023-12-22T06:57:07.511034+00:00 app[web.1]: code: 'ERR_DLOPEN_FAILED'
-2023-12-22T06:57:07.511034+00:00 app[web.1]: }
-2023-12-22T06:57:07.511037+00:00 app[web.1]:
-2023-12-22T06:57:07.511037+00:00 app[web.1]: Node.js v20.10.0
-2023-12-22T06:57:07.574904+00:00 heroku[web.1]: Process exited with status 1
-2023-12-22T06:57:07.603353+00:00 heroku[web.1]: State changed from starting to crashed
-2023-12-22T07:07:33.000000+00:00 app[api]: Build started by user ryopon.kr@gmail.com
-2023-12-22T07:07:53.000000+00:00 app[api]: Build succeeded
-2023-12-22T07:07:53.277426+00:00 app[api]: Release v8 created by user ryopon.kr@gmail.com
-2023-12-22T07:07:53.277426+00:00 app[api]: Deploy 0c9665b0 by user ryopon.kr@gmail.com
-2023-12-22T07:07:53.533530+00:00 heroku[web.1]: State changed from crashed to starting
-2023-12-22T07:07:56.612219+00:00 heroku[web.1]: Starting process with command `node app.js`
-2023-12-22T07:07:58.211571+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
-2023-12-22T07:07:58.211644+00:00 app[web.1]: designed for a production environment, as it will leak
-2023-12-22T07:07:58.211644+00:00 app[web.1]: memory, and will not scale past a single process.
-2023-12-22T07:07:58.214243+00:00 app[web.1]: Server is running
-2023-12-22T07:08:57.095101+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
-2023-12-22T07:08:57.108595+00:00 heroku[web.1]: Stopping process with SIGKILL
-2023-12-22T07:08:57.266053+00:00 heroku[web.1]: Process exited with status 137
-2023-12-22T07:08:57.291743+00:00 heroku[web.1]: State changed from starting to crashed
-2023-12-22T07:08:57.294893+00:00 heroku[web.1]: State changed from crashed to starting
-2023-12-22T07:09:00.113499+00:00 heroku[web.1]: Starting process with command `node app.js`
-2023-12-22T07:09:01.841906+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
-2023-12-22T07:09:01.841942+00:00 app[web.1]: designed for a production environment, as it will leak
-2023-12-22T07:09:01.841942+00:00 app[web.1]: memory, and will not scale past a single process.
-2023-12-22T07:09:01.844638+00:00 app[web.1]: Server is running
-2023-12-22T07:10:00.718824+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
-2023-12-22T07:10:00.737992+00:00 heroku[web.1]: Stopping process with SIGKILL
-2023-12-22T07:10:00.870410+00:00 heroku[web.1]: Process exited with status 137
-2023-12-22T07:10:00.899355+00:00 heroku[web.1]: State changed from starting to crashed
-2023-12-22T07:31:24.136728+00:00 heroku[web.1]: State changed from crashed to starting
-2023-12-22T07:31:27.723127+00:00 heroku[web.1]: Starting process with command `node app.js`
-2023-12-22T07:31:29.102266+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
-2023-12-22T07:31:29.102278+00:00 app[web.1]: designed for a production environment, as it will leak
-2023-12-22T07:31:29.102279+00:00 app[web.1]: memory, and will not scale past a single process.
-2023-12-22T07:31:29.105854+00:00 app[web.1]: Server is running
-2023-12-22T07:32:27.787384+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
-2023-12-22T07:32:27.800830+00:00 heroku[web.1]: Stopping process with SIGKILL
-2023-12-22T07:32:27.888611+00:00 heroku[web.1]: Process exited with status 137
-2023-12-22T07:32:27.910140+00:00 heroku[web.1]: State changed from starting to crashed
-2023-12-22T07:59:18.000000+00:00 app[api]: Build started by user ryopon.kr@gmail.com
-2023-12-22T07:59:35.652772+00:00 app[api]: Deploy ec2b180d by user ryopon.kr@gmail.com
-2023-12-22T07:59:35.652772+00:00 app[api]: Release v9 created by user ryopon.kr@gmail.com
-2023-12-22T07:59:35.902688+00:00 heroku[web.1]: State changed from crashed to starting
-2023-12-22T07:59:36.000000+00:00 app[api]: Build succeeded
-2023-12-22T07:59:38.588240+00:00 heroku[web.1]: Starting process with command `node app.js`
-2023-12-22T07:59:39.912061+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
-2023-12-22T07:59:39.912073+00:00 app[web.1]: designed for a production environment, as it will leak
-2023-12-22T07:59:39.912073+00:00 app[web.1]: memory, and will not scale past a single process.
-2023-12-22T07:59:39.915076+00:00 app[web.1]: Server is running
-2023-12-22T08:00:39.071934+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
-2023-12-22T08:00:39.084857+00:00 heroku[web.1]: Stopping process with SIGKILL
-2023-12-22T08:00:39.219568+00:00 heroku[web.1]: Process exited with status 137
-2023-12-22T08:00:39.240323+00:00 heroku[web.1]: State changed from starting to crashed
-2023-12-22T08:00:39.243283+00:00 heroku[web.1]: State changed from crashed to starting
-2023-12-22T08:00:41.996391+00:00 heroku[web.1]: Starting process with command `node app.js`
-2023-12-22T08:00:43.342533+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
-2023-12-22T08:00:43.342545+00:00 app[web.1]: designed for a production environment, as it will leak
-2023-12-22T08:00:43.342545+00:00 app[web.1]: memory, and will not scale past a single process.
-2023-12-22T08:00:43.345773+00:00 app[web.1]: Server is running
-2023-12-22T08:01:42.354176+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
-2023-12-22T08:01:42.372330+00:00 heroku[web.1]: Stopping process with SIGKILL
-2023-12-22T08:01:42.480684+00:00 heroku[web.1]: Process exited with status 137
-2023-12-22T08:01:42.506151+00:00 heroku[web.1]: State changed from starting to crashed
-2023-12-22T08:01:43.844545+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=genie-hp-88c35c59dc49.herokuapp.com request_id=ead2225a-308b-4585-a141-a2c1732ae62a fwd="133.9.37.44" dyno= connect= service= status=503 bytes= protocol=https       
-2023-12-22T08:01:44.121078+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=genie-hp-88c35c59dc49.herokuapp.com request_id=ca6236eb-5ad3-4dcc-abfb-a0cfb259103a fwd="133.9.37.44" dyno= connect= service= status=503 bytes= protocol=https       
-2023-12-22T08:11:44.000000+00:00 app[api]: Build started by user ryopon.kr@gmail.com
-2023-12-22T08:12:03.017785+00:00 heroku[web.1]: State changed from crashed to starting
-2023-12-22T08:12:05.917953+00:00 heroku[web.1]: Starting process with command `node app.js`
-2023-12-22T08:12:07.399379+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
 2023-12-22T08:12:07.399391+00:00 app[web.1]: designed for a production environment, as it will leak
 2023-12-22T08:12:07.399391+00:00 app[web.1]: memory, and will not scale past a single process.
 2023-12-22T08:12:07.402551+00:00 app[web.1]: Server is running
+2023-12-22T08:13:06.537784+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2023-12-22T08:13:06.552816+00:00 heroku[web.1]: Stopping process with SIGKILL
+2023-12-22T08:13:06.790662+00:00 heroku[web.1]: Process exited with status 137
+2023-12-22T08:13:06.811308+00:00 heroku[web.1]: State changed from starting to crashed
+2023-12-22T08:13:06.814551+00:00 heroku[web.1]: State changed from crashed to starting
+2023-12-22T08:13:09.645801+00:00 heroku[web.1]: Starting process with command `node app.js`
+2023-12-22T08:13:11.110147+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
+2023-12-22T08:13:11.110161+00:00 app[web.1]: designed for a production environment, as it will leak
+2023-12-22T08:13:11.110161+00:00 app[web.1]: memory, and will not scale past a single process.
+2023-12-22T08:13:11.113436+00:00 app[web.1]: Server is running
+2023-12-22T08:14:09.674309+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2023-12-22T08:14:09.687815+00:00 heroku[web.1]: Stopping process with SIGKILL
+2023-12-22T08:14:09.835751+00:00 heroku[web.1]: Process exited with status 137
+2023-12-22T08:14:09.863669+00:00 heroku[web.1]: State changed from starting to crashed
+2023-12-22T08:23:02.948724+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=genie-hp-88c35c59dc49.herokuapp.com request_id=227c2c8e-efc5-4cb9-8418-bd4e11220081 fwd="133.9.37.44" dyno= connect= service= status=503 bytes= protocol=https       
+2023-12-22T08:23:03.449300+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=genie-hp-88c35c59dc49.herokuapp.com request_id=ea6efd55-19b0-4c66-94d4-7aa897788e3f fwd="133.9.37.44" dyno= connect= service= status=503 bytes= protocol=https
+2023-12-22T08:26:44.000000+00:00 app[api]: Build started by user ryopon.kr@gmail.com
+2023-12-22T08:27:01.000000+00:00 app[api]: Build succeeded
+2023-12-22T08:27:01.126545+00:00 app[api]: Deploy 73be9ddf by user ryopon.kr@gmail.com
+2023-12-22T08:27:01.126545+00:00 app[api]: Release v11 created by user ryopon.kr@gmail.com
+2023-12-22T08:27:02.118385+00:00 heroku[web.1]: State changed from crashed to starting
+2023-12-22T08:27:05.291229+00:00 heroku[web.1]: Starting process with command `node app.js`
+2023-12-22T08:27:06.615642+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
+2023-12-22T08:27:06.615666+00:00 app[web.1]: designed for a production environment, as it will leak
+2023-12-22T08:27:06.615666+00:00 app[web.1]: memory, and will not scale past a single process.
+2023-12-22T08:27:06.619614+00:00 app[web.1]: Server is running
+2023-12-22T08:27:06.666869+00:00 heroku[web.1]: State changed from starting to up
+2023-12-22T08:27:07.873462+00:00 heroku[router]: at=info method=GET path="/" host=genie-hp-88c35c59dc49.herokuapp.com request_id=187d57f5-f7c2-4379-bb15-343acb144ff5 fwd="133.9.37.44" dyno=web.1 connect=0ms service=11ms status=200 bytes=2499 protocol=https
+2023-12-22T08:27:08.184205+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=genie-hp-88c35c59dc49.herokuapp.com request_id=ca149baf-8e5a-4c4a-aaf1-96da4823df4c fwd="133.9.37.44" dyno=web.1 connect=0ms service=3ms status=200 bytes=16140 protocol=https       
+2023-12-22T08:27:08.609371+00:00 heroku[router]: at=info method=GET path="/socket.io/socket.io.js" host=genie-hp-88c35c59dc49.herokuapp.com request_id=85460002-6549-460d-935e-0476e5373989 fwd="133.9.37.44" dyno=web.1 connect=0ms service=10ms status=200 bytes=30861 protocol=https
+2023-12-22T08:27:08.822378+00:00 heroku[router]: at=info method=GET path="/script.js" host=genie-hp-88c35c59dc49.herokuapp.com request_id=04b0580c-440c-447e-a7aa-9ab85a22cb2a fwd="133.9.37.44" dyno=web.1 connect=0ms service=2ms status=200 bytes=2879 protocol=https
+2023-12-22T08:27:08.855687+00:00 heroku[router]: at=info method=GET path="/images/genie_4.jpg" host=genie-hp-88c35c59dc49.herokuapp.com request_id=2eda22ed-5a71-4dd7-b4cb-673b1ef4384d fwd="133.9.37.44" dyno=web.1 connect=0ms service=3ms status=200 bytes=195047 protocol=https 
+2023-12-22T08:27:09.067931+00:00 heroku[router]: at=info method=GET path="/socket.io/?EIO=4&transport=polling&t=OoGeggN" host=genie-hp-88c35c59dc49.herokuapp.com request_id=54f108f6-0348-4267-9b1a-aed542c2d145 fwd="133.9.37.44" dyno=web.1 connect=0ms service=3ms status=200 bytes=280 protocol=https
+2023-12-22T08:27:09.359550+00:00 heroku[router]: at=info method=POST path="/socket.io/?EIO=4&transport=polling&t=OoGegl5&sid=eoainHGUTPx__erIAAAA" host=genie-hp-88c35c59dc49.herokuapp.com request_id=e0b6111f-9612-4d28-8587-3dcd36eec140 fwd="133.9.37.44" dyno=web.1 connect=0ms
+ service=3ms status=200 bytes=146 protocol=https
+2023-12-22T08:27:09.359908+00:00 app[web.1]: socket接続成功
+2023-12-22T08:27:09.361271+00:00 heroku[router]: at=info method=GET path="/socket.io/?EIO=4&transport=polling&t=OoGegl8&sid=eoainHGUTPx__erIAAAA" host=genie-hp-88c35c59dc49.herokuapp.com request_id=93016061-9cec-4cee-9e73-cbc364777dfb fwd="133.9.37.44" dyno=web.1 connect=0ms service=2ms status=200 bytes=193 protocol=https
+2023-12-22T08:27:09.797827+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=genie-hp-88c35c59dc49.herokuapp.com request_id=4a15110f-0aa4-4583-af68-1e2c878edca9 fwd="133.9.37.44" dyno=web.1 connect=0ms service=3ms status=404 bytes=394 protocol=https
+2023-12-22T08:27:10.157270+00:00 heroku[router]: at=info method=GET path="/socket.io/?EIO=4&transport=polling&t=OoGegoW&sid=eoainHGUTPx__erIAAAA" host=genie-hp-88c35c59dc49.herokuapp.com request_id=6d67ca96-544b-471a-84e2-56b1e54ccb88 fwd="133.9.37.44" dyno=web.1 connect=0ms service=583ms status=200 bytes=161 protocol=https
+2023-12-22T08:27:14.264629+00:00 app[web.1]: Error fetching data: Error: connect ECONNREFUSED 127.0.0.1:3306
+2023-12-22T08:27:14.264692+00:00 app[web.1]: at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1595:16)
+2023-12-22T08:27:14.264693+00:00 app[web.1]: --------------------
+2023-12-22T08:27:14.264694+00:00 app[web.1]: at Protocol._enqueue (/app/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+2023-12-22T08:27:14.264694+00:00 app[web.1]: at Protocol.handshake (/app/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+2023-12-22T08:27:14.264695+00:00 app[web.1]: at Connection.connect (/app/node_modules/mysql/lib/Connection.js:116:18)
+2023-12-22T08:27:14.264695+00:00 app[web.1]: at Connection._implyConnect (/app/node_modules/mysql/lib/Connection.js:454:10)
+2023-12-22T08:27:14.264695+00:00 app[web.1]: at Connection.query (/app/node_modules/mysql/lib/Connection.js:196:8)
+2023-12-22T08:27:14.264696+00:00 app[web.1]: at /app/app.js:130:14
+2023-12-22T08:27:14.264696+00:00 app[web.1]: at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)     
+2023-12-22T08:27:14.264696+00:00 app[web.1]: at next (/app/node_modules/express/lib/router/route.js:144:13)
+2023-12-22T08:27:14.264697+00:00 app[web.1]: at _middleware (/app/node_modules/express-paginate/index.js:121:5)
+2023-12-22T08:27:14.264697+00:00 app[web.1]: at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)     
+2023-12-22T08:27:44.245153+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/blog" host=genie-hp-88c35c59dc49.herokuapp.com request_id=614c9f42-86a1-4890-b6f0-c895d26e1e7f fwd="133.9.37.44" dyno=web.1 connect=0ms service=30000ms status=503 bytes=0 protocol=https
+2023-12-22T08:27:44.501571+00:00 heroku[router]: at=info method=GET path="/socket.io/?EIO=4&transport=websocket&sid=eoainHGUTPx__erIAAAA" host=genie-hp-88c35c59dc49.herokuapp.com request_id=8d08daee-0b6e-401e-ab64-fa8073078db5 fwd="133.9.37.44" dyno=web.1 connect=0ms service=34677ms status=101 bytes=140 protocol=https
+2023-12-22T08:27:53.768433+00:00 heroku[router]: at=info method=GET path="/socket.io/?EIO=4&transport=polling&t=OoGerRN" host=genie-hp-88c35c59dc49.herokuapp.com request_id=0f39ee57-cead-4754-9d05-c78befd67b5b fwd="133.9.37.44" dyno=web.1 connect=0ms service=1ms status=200 bytes=280 protocol=https
+2023-12-22T08:27:53.995353+00:00 heroku[router]: at=info method=POST path="/socket.io/?EIO=4&transport=polling&t=OoGereR&sid=Gy8hPLLHQJyMrb46AAAC" host=genie-hp-88c35c59dc49.herokuapp.com request_id=14079985-df77-4d06-9bc7-1599c82286f6 fwd="133.9.37.44" dyno=web.1 connect=0ms
+ service=1ms status=200 bytes=146 protocol=https
+2023-12-22T08:27:53.995405+00:00 app[web.1]: socket接続成功
+2023-12-22T08:27:54.001602+00:00 heroku[router]: at=info method=GET path="/socket.io/?EIO=4&transport=polling&t=OoGereS&sid=Gy8hPLLHQJyMrb46AAAC" host=genie-hp-88c35c59dc49.herokuapp.com request_id=6c1e5e08-5761-4724-b314-c70c67eebc4f fwd="133.9.37.44" dyno=web.1 connect=0ms service=1ms status=200 bytes=193 protocol=https
+2023-12-22T08:27:54.751017+00:00 heroku[router]: at=info method=GET path="/socket.io/?EIO=4&transport=polling&t=OoGerhz&sid=Gy8hPLLHQJyMrb46AAAC" host=genie-hp-88c35c59dc49.herokuapp.com request_id=82785b94-1a71-44c6-9146-be4dd32ab54d fwd="133.9.37.44" dyno=web.1 connect=0ms service=524ms status=200 bytes=161 protocol=https
+2023-12-22T08:30:55.543467+00:00 heroku[router]: at=info method=GET path="/" host=genie-hp-88c35c59dc49.herokuapp.com request_id=62015a12-a4d2-4089-a811-3a2e23b576a3 fwd="147.92.179.116" dyno=web.1 connect=0ms service=2ms status=200 bytes=2499 protocol=https
+2023-12-22T08:31:04.384717+00:00 heroku[router]: at=info method=GET path="/" host=genie-hp-88c35c59dc49.herokuapp.com request_id=48302b91-9fe7-44d5-8227-e2e14ded6f47 fwd="147.92.179.113" dyno=web.1 connect=0ms service=2ms status=200 bytes=2499 protocol=https
+2023-12-22T08:31:08.453934+00:00 heroku[router]: at=info method=GET path="/" host=genie-hp-88c35c59dc49.herokuapp.com request_id=902bd0db-0704-4868-98d4-afd9d0ac47b9 fwd="133.106.154.44" dyno=web.1 connect=0ms service=2ms status=200 bytes=2499 protocol=https
+2023-12-22T08:31:08.759646+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=genie-hp-88c35c59dc49.herokuapp.com request_id=498a8c20-bc5e-4293-ae10-8e4a30077413 fwd="133.106.154.44" dyno=web.1 connect=0ms service=2ms status=200 bytes=16140 protocol=https    
+2023-12-22T08:31:09.467958+00:00 heroku[router]: at=info method=GET path="/script.js" host=genie-hp-88c35c59dc49.herokuapp.com request_id=ba4d4cb7-e1e3-40a6-9e46-68dd24e42682 fwd="133.106.154.44" dyno=web.1 connect=0ms service=1ms status=200 bytes=2879 protocol=https
+2023-12-22T08:31:09.472264+00:00 heroku[router]: at=info method=GET path="/socket.io/socket.io.js" host=genie-hp-88c35c59dc49.herokuapp.com request_id=e809bc66-18ee-49b9-867a-77430ecfc275 fwd="133.106.154.44" dyno=web.1 connect=0ms service=6ms status=200 bytes=30861 protocol=https
+2023-12-22T08:31:09.722658+00:00 heroku[router]: at=info method=GET path="/images/genie_4.jpg" host=genie-hp-88c35c59dc49.herokuapp.com request_id=1a88696b-8b68-4b22-92b6-93761f30fba6 fwd="133.106.154.44" dyno=web.1 connect=0ms service=4ms status=200 bytes=195047 protocol=https
+2023-12-22T08:31:10.326446+00:00 heroku[router]: at=info method=GET path="/socket.io/?EIO=4&transport=polling&t=OoGfbZ9" host=genie-hp-88c35c59dc49.herokuapp.com request_id=2f725448-c225-43f6-a848-e1779ecafaa9 fwd="133.106.154.44" dyno=web.1 connect=0ms service=1ms status=200
+ bytes=280 protocol=https
+2023-12-22T08:31:10.564391+00:00 heroku[router]: at=info method=POST path="/socket.io/?EIO=4&transport=polling&t=OoGfbd1&sid=XSsY4QVxHCPvn0QIAAAE" host=genie-hp-88c35c59dc49.herokuapp.com request_id=76bc8e2c-fa23-4d6d-b25f-ec2e38da69db fwd="133.106.154.44" dyno=web.1 connect=0ms service=1ms status=200 bytes=146 protocol=https
+2023-12-22T08:31:10.564874+00:00 app[web.1]: socket接続成功
+2023-12-22T08:31:10.565011+00:00 heroku[router]: at=info method=GET path="/socket.io/?EIO=4&transport=polling&t=OoGfbd2&sid=XSsY4QVxHCPvn0QIAAAE" host=genie-hp-88c35c59dc49.herokuapp.com request_id=107b91cc-da80-496b-9d19-c1b1c8a93742 fwd="133.106.154.44" dyno=web.1 connect=0ms service=2ms status=200 bytes=193 protocol=https
+2023-12-22T08:31:10.759320+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=genie-hp-88c35c59dc49.herokuapp.com request_id=770e7728-73c7-48b4-af2f-13faa3f8a436 fwd="133.106.154.44" dyno=web.1 connect=0ms service=2ms status=404 bytes=394 protocol=https        
+2023-12-22T08:31:11.784371+00:00 heroku[router]: at=info method=GET path="/socket.io/?EIO=4&transport=polling&t=OoGfbgp&sid=XSsY4QVxHCPvn0QIAAAE" host=genie-hp-88c35c59dc49.herokuapp.com request_id=bb4eae20-6bbe-41d9-8cfb-9884dbceb3d2 fwd="133.106.154.44" dyno=web.1 connect=0ms service=981ms status=200 bytes=161 protocol=https
+2023-12-22T08:31:21.478944+00:00 app[web.1]: Error fetching data: Error: Cannot enqueue Query after fatal error.
+2023-12-22T08:31:21.478991+00:00 app[web.1]: at Protocol._validateEnqueue (/app/node_modules/mysql/lib/protocol/Protocol.js:212:16)       
+2023-12-22T08:31:21.478992+00:00 app[web.1]: at Protocol._enqueue (/app/node_modules/mysql/lib/protocol/Protocol.js:138:13)
+2023-12-22T08:31:21.478992+00:00 app[web.1]: at Connection.query (/app/node_modules/mysql/lib/Connection.js:198:25)
+2023-12-22T08:31:21.478994+00:00 app[web.1]: at /app/app.js:130:14
+2023-12-22T08:31:21.478994+00:00 app[web.1]: at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)     
+2023-12-22T08:31:21.478995+00:00 app[web.1]: at next (/app/node_modules/express/lib/router/route.js:144:13)
+2023-12-22T08:31:21.478995+00:00 app[web.1]: at _middleware (/app/node_modules/express-paginate/index.js:121:5)
+2023-12-22T08:31:21.478995+00:00 app[web.1]: at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)     
+2023-12-22T08:31:21.478996+00:00 app[web.1]: at next (/app/node_modules/express/lib/router/route.js:144:13)
+2023-12-22T08:31:21.478996+00:00 app[web.1]: at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+2023-12-22T08:31:31.751609+00:00 app[web.1]: Error fetching data: Error: Cannot enqueue Query after fatal error.
+2023-12-22T08:31:31.751668+00:00 app[web.1]: at Protocol._validateEnqueue (/app/node_modules/mysql/lib/protocol/Protocol.js:212:16)       
+2023-12-22T08:31:31.751669+00:00 app[web.1]: at Protocol._enqueue (/app/node_modules/mysql/lib/protocol/Protocol.js:138:13)
+2023-12-22T08:31:31.751669+00:00 app[web.1]: at Connection.query (/app/node_modules/mysql/lib/Connection.js:198:25)
+2023-12-22T08:31:31.751669+00:00 app[web.1]: at /app/app.js:130:14
+2023-12-22T08:31:31.751670+00:00 app[web.1]: at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)     
+2023-12-22T08:31:31.751670+00:00 app[web.1]: at next (/app/node_modules/express/lib/router/route.js:144:13)
+2023-12-22T08:31:31.751670+00:00 app[web.1]: at _middleware (/app/node_modules/express-paginate/index.js:121:5)
+2023-12-22T08:31:31.751670+00:00 app[web.1]: at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)     
+2023-12-22T08:31:31.751671+00:00 app[web.1]: at next (/app/node_modules/express/lib/router/route.js:144:13)
+2023-12-22T08:31:31.751671+00:00 app[web.1]: at Route.dispatch (/app/node_modules/express/lib/router/route.js:114:3)
+2023-12-22T08:31:51.478394+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/blog" host=genie-hp-88c35c59dc49.herokuapp.com request_id=be0f5404-962d-402d-80db-c230ddf98c79 fwd="133.106.154.44" dyno=web.1 connect=0ms service=30000ms status=503 bytes=0 protocol=https
+2023-12-22T08:31:51.815232+00:00 heroku[router]: at=info method=GET path="/socket.io/?EIO=4&transport=websocket&sid=XSsY4QVxHCPvn0QIAAAE" host=genie-hp-88c35c59dc49.herokuapp.com request_id=c5f63544-95aa-4460-84fe-35a3c9f40cf6 fwd="133.106.154.44" dyno=web.1 connect=0ms service=40425ms status=101 bytes=129 protocol=https
+2023-12-22T08:31:59.106842+00:00 heroku[router]: at=info method=GET path="/socket.io/?EIO=4&transport=websocket&sid=Gy8hPLLHQJyMrb46AAAC" host=genie-hp-88c35c59dc49.herokuapp.com request_id=639163b2-41c5-4d3e-aad9-69354ea224c7 fwd="133.9.37.44" dyno=web.1 connect=0ms service=244675ms status=101 bytes=164 protocol=https
+2023-12-22T08:32:01.751186+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path="/blog" host=genie-hp-88c35c59dc49.herokuapp.com request_id=43a937f7-d53d-47ab-98a0-1635b3b7bbf3 fwd="133.9.37.44" dyno=web.1 connect=0ms service=30000ms status=503 bytes=0 protocol=https
 
