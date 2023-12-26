@@ -24,5 +24,9 @@
   },
   "devDependencies": {
     "http": "^0.0.1-security"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/ryoponpon/GENIE-OFFICIAL/issues"
+  },
+  "homepage": "https://github.com/ryoponpon/GENIE-OFFICIAL#readme"
 }
