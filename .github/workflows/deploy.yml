@@ -11,8 +11,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Install Volta
         run: curl https://get.volta.sh | bash
-      - name: Install Node.js
-        run: volta install node@14
+      - name: Install Node.js with Volta
+        run: |
+          curl https://get.volta.sh | bash
+          export VOLTA_HOME="$HOME/.volta"
+          export PATH="$VOLTA_HOME/bin:$PATH"
+          volta install node@14
+          volta pin node@14
       - name: Install dependencies
         run: npm install
       - name: Build
