@@ -10,6 +10,9 @@ const paginate = require('express-paginate');
 const bcrypt = require('bcryptjs');
 const PORT = process.env.PORT || 3000;
 
+// viewsディレクトリをビューの保存場所として設定
+app.set('views', __dirname + '/views');
+
 
 
 app.set('view engine', 'ejs');
@@ -23,10 +26,11 @@ app.get('/script.js', (req, res) => {
 });
 
 const connection = mysql.createConnection({
-  host: 'process.env.DB_HOST',
-  user: 'process.env.DB_USER',
-  password: 'process.env.DB_PASSWORD',	
-  database: 'process.env.DB_DATABASE',
+  host: 'geniehp-database.xxxxxxxxxxxx.ap-northeast-1.rds.amazonaws.com',
+  user: 'admin',
+  password: 'ryopon1207',	
+  database: 'GENIE',
+  charset: 'utf8mb4'
 });
 
 
