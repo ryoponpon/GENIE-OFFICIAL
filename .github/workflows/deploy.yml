@@ -9,14 +9,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Install Volta
-        run: curl https://get.volta.sh | bash
-      - name: Install Node.js
-        run: volta install node@14
+
+      - name: Setup Node.js with Volta
+        run: |
+          curl https://get.volta.sh | bash
+          export VOLTA_HOME="$HOME/.volta"
+          export PATH="$VOLTA_HOME/bin:$PATH"
+          volta install node@14
+          volta pin node@14
+
       - name: Install dependencies
         run: npm install
+
       - name: Build
         run: npm run build
+
       - name: Copy files to EC2
         uses: appleboy/scp-action@master
         with:
@@ -25,6 +32,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           source: "."
           target: "/home/${{ secrets.EC2_USER }}/app"
+
       - name: Restart app on EC2
         uses: appleboy/ssh-action@master
         with:
@@ -33,4 +41,4 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd app
-            pm2 restart ecosystem.config.js
+            volta exec -- node ./path/to/start/script.js
