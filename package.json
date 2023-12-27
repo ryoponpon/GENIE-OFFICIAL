@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "build:ejs": "ejs-cli --base-dir views '*.ejs' --out html"
   },
   "repository": {
     "type": "git",
