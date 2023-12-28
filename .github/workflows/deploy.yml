@@ -25,11 +25,12 @@ jobs:
       - name: Copy files to EC2
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          source: "."
-          target: "/home/${{ secrets.EC2_USER }}/app"
+          host: ${{ secrets.EC2_HOST }} # リモートサーバーのホスト名
+          username: ${{ secrets.EC2_USER }} # SSH接続のユーザー名
+          key: ${{ secrets.EC2_SSH_KEY }} # SSHキー（秘密鍵）
+          source: "." # 転送元のファイル/ディレクトリ
+          target: "/home/${{ secrets.EC2_USER }}/app" # 転送先のパス
+
       - name: Restart app on EC2
         uses: appleboy/ssh-action@master
         with:
